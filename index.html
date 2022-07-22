@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tv4 Interactivo</title>
+
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" type="text/css" href="glider.min.css" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&family=Questrial&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Fontawesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Animate CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/apple-touch-icon.png?">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon/favicon-32x32.png?">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon/favicon-16x16.png?">
+    <link rel="manifest" href="assets/images/favicon/site.webmanifest?">
+    <link rel="mask-icon" href="assets/images/favicon/safari-pinned-tab.svg?" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    
+  </head>
+  <body>
+
+    <nav class="navbar">
+      <a href="#">
+        <img
+          class="logo"
+          src="assets/images/Logo_4i_mayus.png"
+          alt="Logo 4 Interactivo"
+        />
+      </a>
+
+      <div class="dropdown">
+        <button onclick="toggleDisplay()" id="dropbtn" class="dropbtn">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+        <div
+          id="dropdown-content"
+          class="dropdown-content animate__animated animate__fadeIn"
+          style="display: none"
+        >
+          <button href="#"><i class="home fa-solid fa-house"></i></button>
+          <button onclick="copyURL()" href="#">
+            <i class="share fa-solid fa-share-nodes"></i>
+          </button>
+          <button onclick="changeLang()" href="#">
+            <i class="lang fa-solid fa-language"></i>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <div class="text-container">
+        <div id="text-esp" class="texts" style="display: flex;">
+          
+            <h1>Tv4 Interactivo</h1>
+            <h2>
+              Es una sección de TvCuatro dedicada al contenido XR y tours
+              virtuales.
+            </h2>
+            <p class="description">
+              Buscamos innovar a través de contenidos interactivos con la
+              creación de nuevas experiencias y narrativas para compartir con
+              nuestra audiencia.
+            </p>
+          </div>
+
+          <div id="text-eng" class="texts" style="display: none;">
+            <h1>Tv4 Interactivo</h1>
+            <h2>
+             It is a section at TvCuatro dedicatd to XR content and virtual tours.
+            </h2>
+            <p class="description">
+              We seek to innovate through interactive content by
+              creating new experiences and narratives to share with
+              our audience.
+            </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <model-viewer
+        bounds="tight"
+        src="assets/models/4i_model.glb"
+        ar
+        ar-modes="webxr scene-viewer quick-look"
+        camera-controls
+        camera-orbit="-2.394deg 88.96deg auto"
+        environment-image="assets/images/royal_esplanade_1k.hdr"
+        poster="poster.webp"
+        shadow-intensity="1.26"
+        exposure="1"
+        min-camera-orbit="auto auto 7m"
+        max-field-of-view="25deg"
+        max-camera-orbit="auto 90deg auto"
+        disable-zoom
+      >
+        <div class="progress-bar hide" slot="progress-bar">
+          <div class="update-bar"></div>
+        </div>
+        <button slot="ar-button" id="ar-button">Ver en tu espacio</button>
+        <div id="ar-prompt">
+          <img src="https://modelviewer.dev/shared-assets/icons/hand.png" />
+        </div>
+      </model-viewer>
+    </main>
+
+    <section class="middle">
+      <div id="text-esp2" class="middle-text" style="display: flex;">
+        <h1>Explora nuestros proyectos</h1>
+        <h2>
+          Hemos dividido nuestros proyectos en
+          <strong>Recorridos Virtuales</strong> y
+          <strong>Notas Interactivas</strong>. ¡Echa un vistazo!
+        </h2>
+      </div>
+
+      <div id="text-eng2" class="middle-text" style="display: none;">
+        <h1>Explore our projects</h1>
+        <h2>
+          We've divided our projects into
+          <strong>Virtual Tours</strong> and
+          <strong>Interactive Notes</strong>. ¡Take a look!
+        </h2>
+      </div>
+    </section>
+
+    <div class="grid">
+      <div class="glider-top">
+        <h2 id="text-esp3" class="grid-h2" style="display: flex;">Recorridos virtuales</h2>
+        <h2 id="text-eng3" class="grid-h2" style="display: none;">Virtual Tours</h2>
+        <div class="glider-contain">
+          <button aria-label="Previous" class="glider-prev">
+            <i class="fa-solid fa-chevron-left"></i>
+          </button>
+          <div class="glider">
+            <div class="card">
+              <a href="https://www.youtube.com/watch?v=JYe6GgWtmUY&t=41s">
+                <img src="assets/images/tut.jpg" alt="Tutankamón" />
+                <p>"Tutankamón: la tumba el oro y la maldición"</p>
+              </a>
+            </div>
+            <div class="card">
+              <a href="https://www.theasys.io/viewer/THyf1wO4E2bqJZHN9COTBnKx0pvKDo/">
+                <img src="assets/images/play.jpg" alt="Playmoculturas" />
+                <p>"Navegando la historia: Playmoculturas"</p>
+              </a>
+            </div>
+            <div class="card">
+              <a href="https://www.theasys.io/viewer/r2x1A52VjcaMd5Z9vBrlSpGFuwhSvl/">
+                <img src="assets/images/km.jpg" alt="Km/h" />
+                <p>"Km/h: Hecho en Guanajuato"</p>
+              </a>
+            </div>
+            <div class="card">
+              <a href="https://www.youtube.com/watch?v=Kvabk0ciKkA&t=155s">
+                <img src="assets/images/jurasico.jpg" alt="Parque Jurásico" />
+                <p>Parque Jurásico Bicentenaurio</p>
+              </a>
+            </div>
+            <div class="card">
+              <img src="assets/images/hielo.jpg" alt="Edad de hielo en México" />
+              <p>La Edad de Hielo en México</p>
+            </div>
+            <div class="card">
+              <a href="youtube://https://www.youtube.com/watch?v=xQGvbHE6SQQ&t=14s">
+                <img src="assets/images/rally_campus.jpg" alt="Rally Campus" />
+                <p>Video 360° en el Rally Campus</p>
+              </a>
+            </div>
+          </div>
+          <button aria-label="Next" class="glider-next">
+            <i class="fa-solid fa-chevron-right"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid">
+      <div class="glider-top">
+        <h2 id="text-esp4" class="grid-h2" style="display: flex;">Notas Interactivas</h2>
+        <h2 id="text-eng4" class="grid-h2" style="display: none;">Interactive Notes</h2>
+        <div class="glider-contain">
+          <button aria-label="Previous" class="glider-prev">
+            <i class="fa-solid fa-chevron-left"></i>
+          </button>
+          <div class="glider2">
+            <div class="card">
+              <a href="https://tv4interactivo.github.io/FIC2020/">
+              <img src="assets/images/FIC2020.jpg" alt="Museo Virtual FIC2020" />
+              <p>Museo Virtual "Festival Internacional Cervantino 2020"</p>
+              </a>
+            </div>
+            <div class="card">
+              <a href="https://tv4interactivo.github.io/AR-placed-model/">
+                <img src="assets/images/atlante.jpg" alt="Atlantes de Tula" />
+              <p>Los Atlantes de Tula</p>
+              </a>
+            </div>
+            <div class="card">
+              <img src="https://dummyimage.com/600x400/000/fcd3b6" alt="" />
+              <p>Guanajuato sabe a fruta</p>
+            </div>
+            <div class="card">
+              <img src="https://dummyimage.com/600x400/000/fcd3b6" alt="" />
+              <p>La oficina</p>
+            </div>
+            <div class="card">
+              <img src="https://dummyimage.com/600x400/000/fcd3b6" alt="" />
+              <p>La noche estrellada</p>
+            </div>
+            <div class="card">
+              <img src="https://dummyimage.com/600x400/000/fcd3b6" alt="" />
+              <p>Nota anónima</p>
+            </div>
+          </div>
+          <button aria-label="Next" class="glider-next">
+            <i class="fa-solid fa-chevron-right"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <p id="text-esp5" style="display: flex;">Derechos reservados 2022</p>
+      <p id="text-eng5" style="display: none;">All rights reserved 2022</p>
+    </footer>
+
+    <script src="glider.min.js"></script>
+    <script src="script.js"></script>
+
+    <!-- Loads <model-viewer> for browsers: -->
+    <script
+      type="module"
+      src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"
+    ></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+  </body>
+</html>
