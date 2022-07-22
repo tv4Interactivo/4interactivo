@@ -41,12 +41,6 @@ function copyURL() {
   toggle.style.display = "none";
 }
 
-document.addEventListener("mouseup", function (e) {
-  var container = document.getElementById("alert");
-  if (!container.contains(e.target)) {
-    container.style.display = "none";
-  }
-});
 
 //change language
 function changeLang() {
@@ -117,9 +111,9 @@ new Glider(document.querySelector('.glider'), {
 new Glider(document.querySelector('.glider2'), {
   slidesToShow: 4,
   slidesToScroll: 4,
-  draggable: true,
+  draggable: false,
   arrows: {
-    prev: '.glider-prev',
-    next: '.glider-next'
+    prev: '.b-prev2',
+    next: '.b-next2'
   }
 });
