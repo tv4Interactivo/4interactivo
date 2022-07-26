@@ -31,6 +31,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
+    
     <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/apple-touch-icon.png?">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon/favicon-32x32.png?">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon/favicon-16x16.png?">
@@ -43,13 +44,11 @@
   <body>
 
     <nav class="navbar">
-      <a href="#">
         <img
           class="logo"
           src="assets/images/Logo_4i_mayus.png"
           alt="Logo 4 Interactivo"
         />
-      </a>
 
       <div class="dropdown">
         <button onclick="toggleDisplay()" id="dropbtn" class="dropbtn">
@@ -73,7 +72,7 @@
 
     <main>
       <div class="text-container">
-        <div id="text-esp" class="texts" style="display: flex;">
+        <div id="text-esp" class="texts animate__animated animate__zoomIn" style="display: flex;">
           
             <h1>Tv4 Interactivo</h1>
             <h2>
@@ -87,7 +86,7 @@
             </p>
           </div>
 
-          <div id="text-eng" class="texts" style="display: none;">
+          <div id="text-eng" class="texts animate__animated animate__zoomIn" style="display: none;">
             <h1>Tv4 Interactivo</h1>
             <h2>
              It is a section at TvCuatro dedicatd to XR content and virtual tours.
@@ -129,7 +128,7 @@
     </main>
 
     <section class="middle">
-      <div id="text-esp2" class="middle-text" style="display: flex;">
+      <div id="text-esp2" class="middle-text animate__animated animate__zoomIn" style="display: flex;">
         <h1>Explora nuestros proyectos</h1>
         <h2>
           Hemos dividido nuestros proyectos en
@@ -138,7 +137,7 @@
         </h2>
       </div>
 
-      <div id="text-eng2" class="middle-text" style="display: none;">
+      <div id="text-eng2" class="middle-text animate__animated animate__zoomIn" style="display: none;">
         <h1>Explore our projects</h1>
         <h2>
           We've divided our projects into
@@ -149,7 +148,7 @@
     </section>
 
     <div class="grid">
-      <div class="glider-top">
+      <div class="glider-top animate__animated animate__zoomIn">
         <h2 id="text-esp3" class="grid-h2" style="display: flex;">Recorridos virtuales</h2>
         <h2 id="text-eng3" class="grid-h2" style="display: none;">Virtual Tours</h2>
         <div class="glider-contain">
@@ -200,7 +199,7 @@
     </div>
 
     <div class="grid">
-      <div class="glider-top">
+      <div class="glider-top animate__animated animate__zoomIn">
         <h2 id="text-esp4" class="grid-h2" style="display: flex;">Notas Interactivas</h2>
         <h2 id="text-eng4" class="grid-h2" style="display: none;">Interactive Notes</h2>
         <div class="glider-contain">
@@ -210,19 +209,21 @@
           <div class="glider2">
             <div class="card">
               <a href="https://tv4interactivo.github.io/FIC2020/">
-              <img src="assets/images/FIC2020.jpg" alt="Museo Virtual FIC2020" />
-              <p>Museo Virtual "Festival Internacional Cervantino 2020"</p>
+                <img src="assets/images/FIC2020.jpg" alt="Museo Virtual FIC2020" />
+                <p>Museo Virtual "Festival Internacional Cervantino 2020"</p>
               </a>
             </div>
             <div class="card">
               <a href="https://tv4interactivo.github.io/AR-placed-model/">
                 <img src="assets/images/atlante.jpg" alt="Atlantes de Tula" />
-              <p>Los Atlantes de Tula</p>
+                <p>Los Atlantes de Tula</p>
               </a>
             </div>
             <div class="card">
-              <img src="https://dummyimage.com/600x400/000/fcd3b6" alt="" />
-              <p>Guanajuato sabe a fruta</p>
+              <a href="https://tv4interactivo.github.io/Guanajuato_fruta/">
+                <img src="https://dummyimage.com/600x400/000/fcd3b6" alt="" />
+                <p>Guanajuato sabe a fruta</p>
+              </a>
             </div>
             <div class="card">
               <img src="https://dummyimage.com/600x400/000/fcd3b6" alt="" />

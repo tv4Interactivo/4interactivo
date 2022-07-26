@@ -32,7 +32,7 @@ function copyURL() {
 
   Swal.fire({
     text: '¡Enlace copiado al portapapeles!',
-    icon: 'succes',
+    icon: 'success',
     confirmButtonText: 'Ok',
     background: '#262636',
     color: '#fff'
